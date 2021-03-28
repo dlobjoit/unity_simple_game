@@ -19,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0, 0, forwardForce);
         if(Input.GetKey("d"))
         {
-        	rb.AddForce(sidewayForce, 0, 0);
+        	rb.AddForce(sidewayForce, 0, 0, ForceMode.VelocityChange);
         }
         else if(Input.GetKey("q"))
         {
-        	rb.AddForce(-sidewayForce, 0, 0);
+        	rb.AddForce(-sidewayForce, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
